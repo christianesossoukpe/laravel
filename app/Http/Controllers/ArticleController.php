@@ -34,7 +34,7 @@ class ArticleController extends Controller
         // Sauvegarde de l'image dans le répertoire 'public/images'
         $imagePath = $request->file('image')->store('images', 'public'); 
         // Sauvegarde du fichier PDF dans le répertoire 'public/articles'
-        $filePath = $request->file('file')->store('public/articles'); 
+        $filePath = $request->file('file')->store('articles','public'); 
     
         // Création de l'article avec les chemins des fichiers
         Article::create([
