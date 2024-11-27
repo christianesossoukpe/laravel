@@ -16,13 +16,10 @@ return new class extends Migration
             $table->string('title');          // Titre de l'article
             $table->string('image_path');     // Chemin de l'image associée à l'article
             $table->text('summary');          // Résumé de l'article
-            $table->string('file_path');     // Chemin du fichier PDF (contenu de l'article)
+            $table->string('file_path', 512); // Ajouter la colonne file_path avec une longueur de 512 caractères
             $table->timestamps();
         });
     }
-    
-
-
 
     /**
      * Reverse the migrations.

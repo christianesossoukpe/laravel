@@ -14,7 +14,7 @@ class ArticleFactory extends Factory
             'title' => $this->faker->sentence(),
             'image_path' => 'articles/' . $this->faker->word() . '.pdf', // Exemple de chemin
             'summary' => $this->faker->paragraph(),
-            'content' => $this->faker->paragraphs(3, true),
+            'file_path' => $this->faker->paragraphs(3, true),
         ];
     }
     
