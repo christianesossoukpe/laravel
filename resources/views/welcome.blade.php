@@ -38,6 +38,7 @@
             </a>
         </div>
 
+        <h1 class="text-4xl font-bold text-black-700 mb-4">Ce que nous vous offrons</h1>
         <!-- Section Avantages -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div class="p-8 bg-white shadow-md rounded-md text-center">
