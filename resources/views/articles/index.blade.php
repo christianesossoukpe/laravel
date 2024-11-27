@@ -2,30 +2,25 @@
 
 @section('content')
 <!-- Contenu Principal -->
-<div class="container ml-52 p-10">
+<div class="container mx-auto p-10">
     <h2 class="text-3xl font-semibold mb-6 text-center text-blue-600">Liste des Articles</h2>
     
-    <!-- Table des Articles -->
-    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
-        <thead class="bg-blue-100">
-            <tr>
-                <th class="py-3 px-6 text-left bg-orange-200 text-gray-700">Titre de l'article</th>
-                <th class="py-3 px-6 text-left text-gray-700">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($articles as $article)
-            <tr class="border-b hover:bg-gray-50">
-                <td class="py-3 px-6 text-gray-700">{{ $article->title }}</td>
-                <td class="py-3 px-6 flex justify-between">
-    <a href="{{ Storage::url($article->image_path) }}" target="_blank" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Voir l'article</a>
-    <a href="{{ Storage::url($article->image_path) }}" download class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-green-700 ml-auto">Télécharger</a>
-</td>
-
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <!-- Grille des Articles -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        @foreach ($articles as $article)
+            <div class="bg-white shadow-md rounded-md overflow-hidden">
+                <img src="{{ Storage::url($article->image_path) }}" alt="Image de l'article" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $article->title }}</h3>
+                    <p class="text-gray-600 mb-4">{{ Str::limit($article->summary, 100) }}</p>
+                    <div class="flex justify-between items-center">
+                        <a href="{{ route('articles.show', $article->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Voir l'article</a>
+                        <a href="{{ Storage::url($article->image_path) }}" download class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-green-700">Télécharger</a>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
     
     <!-- Pagination -->
     <div class="flex justify-center mt-6">

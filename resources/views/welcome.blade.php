@@ -21,8 +21,8 @@
             <a href="/" class="text-white text-lg font-bold">Articles Home</a>
             <div>
                 <a href="/" class="text-white mx-4 hover:underline">Accueil</a>
-                <a href="/articles" class="text-white mx-4 hover:underline">Liste des Articles</a>
             </div>
+            <a href="/create" class="text-black mx-4 hover:underline">Actions des Articles</a>
         </div>
     </nav>
 

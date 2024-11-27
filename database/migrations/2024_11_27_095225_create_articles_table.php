@@ -13,13 +13,14 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('image_path'); // Pour stocker le chemin de l'image
-            $table->text('summary');     // Résumé de l'article
-            $table->longText('content'); // Contenu complet de l'article
+            $table->string('title');          // Titre de l'article
+            $table->string('image_path');     // Chemin de l'image associée à l'article
+            $table->text('summary');          // Résumé de l'article
+            $table->string('file_path');     // Chemin du fichier PDF (contenu de l'article)
             $table->timestamps();
         });
     }
+    
 
 
 

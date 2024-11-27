@@ -12,8 +12,7 @@ return [
     | based disks are available to your application for file storage.
     |
     */
-
-    'default' => env('FILESYSTEM_DISK', 'local'),
+    'default' => env('FILESYSTEM_DISK', 'public'),
 
     /*
     |--------------------------------------------------------------------------

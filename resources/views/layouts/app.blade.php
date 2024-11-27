@@ -13,6 +13,7 @@
         <div>
             <a href="/" class="text-white mx-4">Accueil</a>
             <a href="/articles" class="text-white mx-4">Articles</a>
+            <a href="/create" class="text-white mx-4 hover:underline">Actions des Articles</a>
         </div>
     </div>
 </nav>
