@@ -35,7 +35,7 @@ class ArticleController extends Controller
         $imagePath = $request->file('image')->store('images', 'public'); 
         // Sauvegarde du fichier PDF dans le répertoire 'public/articles'
         $filePath = $request->file('file')->store('articles','public'); 
-    
+      
         // Création de l'article avec les chemins des fichiers
         Article::create([
             'title' => $request->title,
@@ -49,7 +49,10 @@ class ArticleController extends Controller
 
     // Afficher un article spécifique
     public function show($id)
-    {
+    {    \Log::info("Méthode 'show' appelée avec ID: " . $id); // Vérifie les logs
+
+        
+        
         $article = Article::findOrFail($id);
         return view('articles.show', compact('article'));
     }
