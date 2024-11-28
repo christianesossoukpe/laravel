@@ -118,4 +118,33 @@ class ArticleController extends Controller
 
         return redirect()->route('articles.index')->with('success', 'Article supprimé avec succès.');
     }
+      // Méthode pour télécharger le PDF
+      public function download($id)
+      {
+          $article = Article::findOrFail($id);
+  
+          // Vérifie si le fichier existe
+          if (Storage::exists($article->file_path)) {
+              return Storage::download($article->file_path);
+          }
+  
+          return redirect()->route('articles.index')->with('error', 'Le fichier PDF n\'est pas disponible.');
+      }
+  
+      // Méthode pour afficher le PDF
+      public function view($id)
+      {
+          $article = Article::findOrFail($id);
+  
+          // Vérifie si le fichier existe
+          if (Storage::exists($article->file_path)) {
+              $filePath = Storage::path($article->file_path);
+  
+              return response()->file($filePath, [
+                  'Content-Type' => 'application/pdf',
+              ]);
+          }
+  
+          return redirect()->route('articles.index')->with('error', 'Le fichier PDF n\'est pas disponible.');
+      }
 }

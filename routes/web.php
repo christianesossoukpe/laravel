@@ -29,5 +29,7 @@ Route::put('/articles/{id}', [ArticleController::class, 'update'])->name('articl
 // Route pour supprimer un article
 Route::delete('/articles/{id}', [ArticleController::class, 'destroy'])->name('articles.destroy');
 
-
+// Routes pour le téléchargement et la lecture du PDF
+Route::get('/articles/{id}/download', [ArticleController::class, 'download'])->name('articles.download');
+Route::get('/articles/{id}/view', [ArticleController::class, 'view'])->name('articles.view');
 

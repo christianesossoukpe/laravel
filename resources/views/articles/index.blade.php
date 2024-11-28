@@ -15,7 +15,7 @@
                     <p class="text-gray-600 mb-4">{{ Str::limit($article->summary, 100) }}</p>
                     <div class="flex justify-between items-center">
                         <a href="{{ route('articles.show', $article->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Voir l'article</a>
-                        <a href="{{ Storage::url($article->image_path) }}" download class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-green-700">Télécharger</a>
+                        <a href="{{ Storage::url($article->image_path) }}" download class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-green-700">Télécharger l'image</a>
                     </div>
                 </div>
             </div>
