@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Contenu Principal -->
-<div class="container mx-auto p-10">
+<div class="container ml-60 mx-auto p-10">
     <h2 class="text-3xl font-semibold mb-6 text-center text-blue-600">Liste des Articles</h2>
     
     <!-- Grille des Articles -->
@@ -22,9 +22,23 @@
         @endforeach
     </div>
     
-    <!-- Pagination -->
-    <div class="flex justify-center mt-6">
-        {{ $articles->links('pagination::tailwind') }}
-    </div>
+<!-- Pagination -->
+<div class="flex justify-center mt-6">
+    {{ $articles->links('pagination::tailwind') }}
+</div>
+<!-- {
+    link: 'bg-white px-3 py-1 border-r border-t border-b text-black no-underline',
+    linkActive: 'bg-yellow-lighter border-yellow font-bold',
+    linkSecond: 'rounded-l border-l',
+    linkBeforeLast: 'rounded-r',
+    linkFirst: {
+        '@apply mr-3 pl-5 border': {},
+        'border-top-left-radius': '999px',
+    },
+    linkLast: {
+        '@apply ml-3 pr-5 border': {},
+        'border-top-right-radius': '999px',
+    },
+} -->
 </div>
 @endsection
