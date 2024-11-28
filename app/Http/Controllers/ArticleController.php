@@ -61,6 +61,8 @@ class ArticleController extends Controller
         return view('articles.edit', compact('article'));
     }
 
+    
+    
     public function update(Request $request, $id)
     {
         $article = Article::findOrFail($id);  // Trouver l'article à mettre à jour
