@@ -19,10 +19,10 @@
                 </div>
 
                 <div class="mt-6 flex justify-center space-x-4">
-                    <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-                        onclick="confirmEdit('{{ route('articles.edit', $article->id) }}')">
+                    <a href="{{ route('articles.edit', $article->id) }}" 
+                       class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
                         Modifier
-                    </button>
+                    </a>
 
                     <button type="button" class="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
                         onclick="confirmDelete({{ $article->id }})">
@@ -35,20 +35,6 @@
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
-        function confirmEdit(editUrl) {
-            swal({
-                title: "Êtes-vous sûr ?",
-                text: "Vous allez modifier cet article !",
-                icon: "info",
-                buttons: true,
-            })
-            .then((willEdit) => {
-                if (willEdit) {
-                    window.location.href = editUrl;
-                }
-            });
-        }
-
         function confirmDelete(articleId) {
             swal({
                 title: "Êtes-vous sûr ?",

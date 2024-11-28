@@ -22,23 +22,12 @@
         @endforeach
     </div>
     
-<!-- Pagination -->
-<div class="flex justify-center mt-6">
-    {{ $articles->links('pagination::tailwind') }}
-</div>
-<!-- {
-    link: 'bg-white px-3 py-1 border-r border-t border-b text-black no-underline',
-    linkActive: 'bg-yellow-lighter border-yellow font-bold',
-    linkSecond: 'rounded-l border-l',
-    linkBeforeLast: 'rounded-r',
-    linkFirst: {
-        '@apply mr-3 pl-5 border': {},
-        'border-top-left-radius': '999px',
-    },
-    linkLast: {
-        '@apply ml-3 pr-5 border': {},
-        'border-top-right-radius': '999px',
-    },
-} -->
+    <!-- Pagination -->
+    <div class="flex justify-center mt-6">
+        <div class="pagination flex items-center space-x-2">
+            {{ $articles->links('pagination::tailwind') }}
+        </div>
+    </div>
+
 </div>
 @endsection

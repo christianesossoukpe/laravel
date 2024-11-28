@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex justify-center items-center min-h-screen">
+<div class="flex justify-center ml-2 w-[2000px] items-center min-h-screen">
     <div class="bg-white p-8 rounded-lg shadow-lg w-full sm:w-96 md:w-1/2 lg:w-1/3 xl:w-1/4">
         <h2 class="text-3xl font-semibold text-center text-blue-600 mb-6">Ajout d'article</h2>
 

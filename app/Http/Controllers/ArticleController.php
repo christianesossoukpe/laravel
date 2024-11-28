@@ -30,7 +30,7 @@ class ArticleController extends Controller
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',  // Validation de l'image
             'file' => 'required|mimes:pdf|max:2048',  // Validation du fichier PDF
         ]);
-        
+        // dd($request);
         // Sauvegarde de l'image dans le répertoire 'public/images'
         $imagePath = $request->file('image')->store('images', 'public'); 
         // Sauvegarde du fichier PDF dans le répertoire 'public/articles'
@@ -49,11 +49,9 @@ class ArticleController extends Controller
 
     // Afficher un article spécifique
     public function show($id)
-    {    \Log::info("Méthode 'show' appelée avec ID: " . $id); // Vérifie les logs
-
-        
-        
-        $article = Article::findOrFail($id);
+    {     
+               $article = Article::findOrFail($id);
+            //    dd($article);
         return view('articles.show', compact('article'));
     }
 

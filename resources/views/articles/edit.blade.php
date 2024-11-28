@@ -35,10 +35,10 @@
                 <!-- Champ pour l'image -->
                 <div class="mb-4">
                     <label for="image" class="block text-gray-700">Image</label>
-                    <input type="file" id="image" name="image" class="w-[400px] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="file" id="image" name="image" class="w-[400px]  p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                     @if ($article->image_path)
                         <div class="mt-2">
-                            <img src="{{ Storage::url($article->image_path) }}" alt="Image actuelle" class="w-32 h-32 object-cover">
+                            <img src="{{ Storage::url($article->image_path) }}" alt="Image actuelle" class="w-32 ml-[280px] h-32 object-cover">
                             <p class="text-sm text-gray-600 mt-2">Image actuelle</p>
                         </div>
                     @endif
