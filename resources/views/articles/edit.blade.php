@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container ml-[500px] w-[900px] p-10 flex justify-center text-center"> <!-- Centrage du conteneur -->
-        <div class="bg-white shadow-md rounded-md overflow-hidden w-full max-w-2xl"> <!-- Limitation de la largeur -->
+    <div class="container ml-[500px] w-[900px] p-10 flex justify-center text-center bg-[url('/public/images/imgbi.png')] bg-cover bg-center"> <!-- Centrage du conteneur -->
+        <div class="bg-orange-100 shadow-md rounded-md overflow-hidden w-full max-w-2xl"> <!-- Limitation de la largeur -->
             <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Modifier l'article</h3>
             
             <!-- Formulaire de modification de l'article -->
@@ -35,7 +35,7 @@
                 <!-- Champ pour l'image -->
                 <div class="mb-4">
                     <label for="image" class="block text-gray-700">Image</label>
-                    <input type="file" id="image" name="image" class="w-[400px]  p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="file" id="image" name="image" class="max-h-full max-w-full">
                     @if ($article->image_path)
                         <div class="mt-2">
                             <img src="{{ Storage::url($article->image_path) }}" alt="Image actuelle" class="w-32 ml-[280px] h-32 object-cover">

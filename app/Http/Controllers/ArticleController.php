@@ -11,7 +11,7 @@ class ArticleController extends Controller
     // Afficher tous les articles avec pagination
     public function index()
     {
-        $articles = Article::paginate(6);  // Paginer les articles, 6 par page
+        $articles = Article::paginate(8);  // Paginer les articles, 6 par page
         return view('articles.index', compact('articles'));
     }
 

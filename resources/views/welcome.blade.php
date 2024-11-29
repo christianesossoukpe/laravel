@@ -14,9 +14,9 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-[url('/public/images/imgbi.png')] bg-cover bg-center">
     <!-- Navigation -->
-    <nav class="bg-yellow-600 p-4 shadow-md">
+    <!-- <nav class="bg-yellow-600 p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <a href="/" class="text-white text-lg font-bold">Articles Home</a>
             <div>
@@ -24,7 +24,7 @@
             </div>
             <a href="/create" class="text-black mx-4 hover:underline">Actions des Articles</a>
         </div>
-    </nav>
+    </nav> -->
 
     <!-- Contenu Principal -->
     <div class="container mx-auto mt-8">
@@ -33,14 +33,18 @@
             <p class="text-gray-700 text-lg">
                 Découvrez une collection d'articles prêts à être téléchargés et partagez vos découvertes avec d'autres !
             </p>
-            <a href="/articles" class="mt-6 inline-block bg-orange-400 text-black px-6 py-3 rounded-lg hover:bg-blue-800">
-                Explorer les Articles
+           
+            <a href="/register" class="mt-6 inline-block bg-orange-400 text-black px-6 py-3 rounded-lg hover:bg-blue-800">
+           Accedez à l'interface des Articles!
             </a>
         </div>
 
-        <h1 class="text-4xl font-bold text-black-700 mb-4">Ce que nous vous offrons</h1>
         <!-- Section Avantages -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            <div class="p-8 bg-white shadow-md rounded-md text-center">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Publiez facilement vos articles grâce à une interface intuitive.</h3>
+                <p class="text-gray-600"> Ajoutez un titre, un contenu riche, des images et des catégories pour mieux organiser vos publications.</p>
+            </div>
             <div class="p-8 bg-white shadow-md rounded-md text-center">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Téléchargement Facile</h3>
                 <p class="text-gray-600">Téléchargez des articles en un seul clic avec des formats compatibles.</p>
@@ -54,37 +58,31 @@
                 <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
             </div>
             <div class="p-8 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Partage Simplifié</h3>
-                <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Sécurité Assurée
+              </h3>
+                <p class="text-gray-600">  "Vos téléchargements sont protégés pour garantir la confidentialité de vos données."</p>
             </div>
             <div class="p-8 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Partage Simplifié</h3>
-                <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2"> Modifiez, supprimez ou archivez vos articles à tout moment.</h3>
+                <p class="text-gray-600">
+                Gardez le contrôle total sur votre contenu avec une gestion centralisée et simplifiée.</p>
             </div>
             <div class="p-8 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Partage Simplifié</h3>
-                <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Organisez vos articles par catégories ou tags pour faciliter la navigation.</h3>
+                <p class="text-gray-600">
+                 Les visiteurs peuvent rechercher des articles spécifiques grâce à des filtres avancés.</p>
             </div>
             <div class="p-8 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Partage Simplifié</h3>
-                <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Permettez à vos lecteurs de partager vos articles sur les réseaux sociaux.</h3>
+                <p class="text-gray-600">
+                Encouragez l'interaction grâce aux commentaires et aux réactions.</p>
             </div>
             <div class="p-8 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Partage Simplifié</h3>
-                <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Accédez aux données clés : </h3>
+                <p class="text-gray-600">
+                interactions  pour optimiser votre contenu et répondre aux attentes de vos lecteurs.</p>
             </div>
-            <div class="p-8 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Partage Simplifié</h3>
-                <p class="text-gray-600">Partagez vos articles préférés avec d'autres utilisateurs.</p>
-            </div>
-         
-          
-        </div>
+          </div>
     </div>
-    <!-- <div class="text-3xl ml-52 font-semibold text-gray-800 mb-2">
-        Soyez informés des nouveautés autour de vous!!!
-    </div> -->
-
-  
-</body>
+   </body>
 </html>

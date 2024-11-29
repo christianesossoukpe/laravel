@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container ml-[500px] w-[900px] h-10 mt-[100] mx-auto p-10">
-        <div class="bg-white shadow-md rounded-md overflow-hidden">
-            <div class="h-64 bg-cover bg-center" style="background-image: url('{{ Storage::url($article->image_path) }}');">
+    <div class="container ml-[500px] w-[900px] h-10 mt-[200px] mx-auto p-10">
+        <div class="bg-orange-300 shadow-md rounded-md overflow-hidden">
+        <div class="flex justify-center items-center bg-gray-200 h-48">
+    <img src="{{ Storage::url($article->image_path) }}" 
+         alt="Image de l'article" 
+         class="max-h-full max-w-full">
+
             </div>
 
             <div class="p-4">
@@ -29,6 +33,7 @@
                         Supprimer
                     </button>
                 </div>
+            </div>
             </div>
         </div>
     </div>
