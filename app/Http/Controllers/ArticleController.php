@@ -158,4 +158,5 @@ class ArticleController extends Controller
   
           return redirect()->route('articles.index')->with('error', 'Le fichier PDF n\'est pas disponible.');
       }
+      
 }

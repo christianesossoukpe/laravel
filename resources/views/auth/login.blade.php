@@ -15,5 +15,7 @@
         </div>
         <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Se connecter</button>
     </form>
+    <p class="text-blue-500"> <a href="/register">Ou Inscrivez-vous si vous n'avez pas encore de compte</a> </p>
+
 </div>
 @endsection

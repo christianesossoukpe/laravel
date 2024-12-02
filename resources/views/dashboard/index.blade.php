@@ -30,8 +30,13 @@
                   href="{{ route('articles.create') }}">Créer un nouvel article</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link block py-2 px-4 mt-8
-                 bg-blue-600  hover:bg-gray-200" href="#">Profil</a>
+                <!-- <a class="nav-link block py-2 px-4 mt-8
+                 bg-blue-600  hover:bg-gray-200" href="#">Profil</a> -->
+                 @if(Auth::check())
+    <a href="{{ route('profile') }}" class="nav-link block py-2 px-4 mt-8
+    bg-blue-600   hover:bg-gray-200">Mon Profil</a>
+@endif
+
             </li>
             <li class="nav-item">
 
@@ -46,7 +51,7 @@
         <!-- Barre de navigation -->
         <nav class="flex items-center justify-between bg-yellow-600  shadow-md p-4">
         <span class="text-2xl font-bold text-black-700 mb-4">
-                Bienvenu sur votre Espace personnel, {{ Auth::user()->name ?? 'Invité' }}
+                Bienvenu sur votre espace personnel, {{ Auth::user()->name ?? 'Invité' }}
             </span>            <div class="flex space-x-4">
             
                 <!-- <a class="nav-link block py-2 px-4  bg-yellow-600  hover:bg-gray-200" href="#">Notifications</a> -->

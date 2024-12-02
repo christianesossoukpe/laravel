@@ -23,7 +23,7 @@
             <div class="flex justify-center items-center bg-gray-200 h-48">
     <img src="{{ Storage::url($article->image_path) }}" 
          alt="Image de l'article" 
-         class="max-h-full max-w-full">
+         class="h-full w-full">
 </div>
                 <div class="p-4">
                     <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $article->title }}</h3>
