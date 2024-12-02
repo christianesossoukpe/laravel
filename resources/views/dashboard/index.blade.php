@@ -64,14 +64,14 @@
                     </nav>
                     
                     <div class="mt-6">
-        <h3 class="text-xl font-bold">Vos Articles</h3>
+        <h3 class="text-xl font-bold">Mes Articles</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach($articles as $article)
                 <li class="bg-white shadow-md p-4 mb-2">
                 <div class="flex justify-center items-center bg-gray-200 h-48">
     <img src="{{ Storage::url($article->image_path) }}" 
          alt="Image de l'article" 
-         class="max-h-full max-w-full">
+         class="h-full w-full">
 </div>
                     <h4 class="font-semibold">{{ $article->title }}</h4>
                     <p class="text-gray-600 mb-4">{{ Str::limit($article->summary, 100) }}</p>

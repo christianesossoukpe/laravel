@@ -15,16 +15,7 @@
     @endif
 </head>
 <body class="bg-[url('/public/images/imgbi.png')] bg-cover bg-center">
-    <!-- Navigation -->
-    <!-- <nav class="bg-yellow-600 p-4 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="/" class="text-white text-lg font-bold">Articles Home</a>
-            <div>
-                <a href="/" class="text-white mx-4 hover:underline">Accueil</a>
-            </div>
-            <a href="/create" class="text-black mx-4 hover:underline">Actions des Articles</a>
-        </div>
-    </nav> -->
+  
 
     <!-- Contenu Principal -->
     <div class="container mx-auto mt-8">
@@ -34,12 +25,16 @@
                 Découvrez une collection d'articles prêts à être téléchargés et partagez vos découvertes avec d'autres !
             </p>
            
-            <a href="/register" class="mt-6 inline-block bg-orange-400 text-black px-6 py-3 rounded-lg hover:bg-blue-800">
-           Accedez à l'interface des Articles!
+            <a href="/register" class="mt-6 inline-block bg-orange-200 text-black px-6 py-3 rounded-lg hover:bg-gray-300">
+        Inscrivez-vous pour accedez à l'interface des Articles!
             </a>
         </div>
 
         <!-- Section Avantages -->
+        <div class="text-center">
+        <h1 class="text-xl mt-6 font-bold text-black-700 mb-4">Fonctionnalités</h1>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div class="p-8 bg-white shadow-md rounded-md text-center">
                 <h3 class="text-xl font-semibold text-gray-800 mb-2">Publiez facilement vos articles grâce à une interface intuitive.</h3>

@@ -80,7 +80,7 @@ class ArticleController extends Controller
         $request->validate([
             'title' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',  // 2MB max image size
-            'file' => 'nullable|mimes:pdf|max:2048',  // Validation pour le fichier PDF (optionnel)
+            'file' => 'nullable|mimes:pdf|max:20048',  // Validation pour le fichier PDF (optionnel)
         ]);
     
         // Si un fichier image est téléchargé, le sauvegarder
