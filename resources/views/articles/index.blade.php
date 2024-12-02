@@ -9,7 +9,7 @@
         <div>
             <a href="/" class="text-white mx-4">Accueil</a>
             <a href="/articles" class="text-white mx-4">Articles</a>
-            <a href="/create" class="text-white mx-4 hover:underline">Ajouter des Articles</a>
+            <a href="/dashboard" class="text-white mx-4 hover:underline">Mon espace</a>
         </div>
     </div>
 </nav>

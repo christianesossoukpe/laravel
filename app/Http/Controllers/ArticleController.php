@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
@@ -29,8 +30,8 @@ class ArticleController extends Controller
             'title' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',  // Validation de l'image
             'file' => 'required|mimes:pdf|max:2048',  // Validation du fichier PDF
-        ]);
-        // dd($request);
+        ]); 
+       
         // Sauvegarde de l'image dans le répertoire 'public/images'
         $imagePath = $request->file('image')->store('images', 'public'); 
         // Sauvegarde du fichier PDF dans le répertoire 'public/articles'
@@ -42,6 +43,8 @@ class ArticleController extends Controller
             'image_path' => $imagePath,  // Stockage du chemin de l'image
             'summary' => $request->summary ?? 'No summary provided',
             'file_path' => $filePath,    // Stockage du chemin du fichier PDF
+            'user_id' => Auth::id(),     // Associe l'article à l'utilisateur connecté
+
         ]);
     
         return redirect()->route('articles.index')->with('success', 'Article ajouté avec succès.');
@@ -51,7 +54,6 @@ class ArticleController extends Controller
     public function show($id)
     {     
                $article = Article::findOrFail($id);
-            //    dd($article);
         return view('articles.show', compact('article'));
     }
 
