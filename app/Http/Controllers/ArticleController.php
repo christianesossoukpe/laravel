@@ -37,14 +37,20 @@ class ArticleController extends Controller
         // Sauvegarde du fichier PDF dans le répertoire 'public/articles'
         $filePath = $request->file('file')->store('articles','public'); 
       
+           // Vérifiez si l'utilisateur est connecté
+    $userId = Auth::id();
+    if (!$userId) {
+        // Gérer le cas où l'utilisateur n'est pas connecté
+        return redirect()->route('articles.index')->with('error', 'Vous devez être connecté pour ajouter un article.');
+    }
         // Création de l'article avec les chemins des fichiers
         Article::create([
             'title' => $request->title,
             'image_path' => $imagePath,  // Stockage du chemin de l'image
             'summary' => $request->summary ?? 'No summary provided',
             'file_path' => $filePath,    // Stockage du chemin du fichier PDF
-            'user_id' => Auth::id(),     // Associe l'article à l'utilisateur connecté
-
+            'user_id' => $userId, // Associe l'article à l'utilisateur connecté
+ 
         ]);
     
         return redirect()->route('articles.index')->with('success', 'Article ajouté avec succès.');

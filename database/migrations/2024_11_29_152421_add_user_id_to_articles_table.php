@@ -11,17 +11,21 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained()->after('content')->onDelete('cascade');
-        });
+        // Vérifie si la colonne user_id n'existe pas déjà
+        if (!Schema::hasColumn('articles', 'user_id')) {
+            Schema::table('articles', function (Blueprint $table) {
+                $table->foreignId('user_id')->constrained()->after('content')->onDelete('cascade');
+            });
+        }
     }
     
     public function down()
     {
         Schema::table('articles', function (Blueprint $table) {
-            $table->dropForeign(['user_id']);
-            $table->dropColumn('user_id');
+            if (Schema::hasColumn('articles', 'user_id')) {
+                $table->dropForeign(['user_id']);
+                $table->dropColumn('user_id');
+            }
         });
     }
 };
-

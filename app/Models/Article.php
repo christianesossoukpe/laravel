@@ -13,6 +13,7 @@ class Article extends Model
         'image_path',
         'summary',
         'file_path',
+        'user_id', // Assurez-vous que user_id est ici
     ];
 
     public function user()
