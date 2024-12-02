@@ -9,9 +9,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-
+// Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class,
+'index'])->name('dashboard')->middleware('auth');
 
 // Route pour afficher tous les articles
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index')->middleware('auth');

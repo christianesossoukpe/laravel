@@ -14,6 +14,7 @@
         <h2 class="text-center  bg-slate-400 text-2xl font-bold py-4">Menu</h2>
         <ul class="flex flex-col">
             <li class="nav-item">
+          
                 <a class="nav-link block py-2 px-4 mt-8
                  bg-orange-100  hover:bg-gray-200" 
                  href="{{ route('dashboard') }}">Espace personnel</a>
@@ -38,20 +39,6 @@
         </ul>
     </div>
 
-    <!-- <div class="content flex-grow p-6">
-    <nav class="flex items-center justify-between bg-yellow-600 shadow-md p-4">
-        <span class="text-2xl font-bold text-black-700 mb-4">
-            Bienvenue sur votre Espace personnel, {{ Auth::user()->name ?? 'Invité' }}
-        </span>
-        <div class="flex space-x-4">
-            <a class="nav-link block py-2 px-4 bg-yellow-600 hover:bg-gray-200" href="#">Notifications</a>
-            <a class="nav-link block py-2 px-4 bg-yellow-600 hover:bg-gray-200" href="#">Messages</a>
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="nav-link block py-2 px-4 bg-yellow-600 hover:bg-gray-200">Déconnexion</button>
-            </form>
-        </div>
-    </nav> -->
 
    
 
@@ -62,8 +49,8 @@
                 Bienvenu sur votre Espace personnel, {{ Auth::user()->name ?? 'Invité' }}
             </span>            <div class="flex space-x-4">
             
-                <a class="nav-link block py-2 px-4  bg-yellow-600  hover:bg-gray-200" href="#">Notifications</a>
-                <a class="nav-link block py-2 px-4  bg-yellow-600  hover:bg-gray-200" href="#">Messages</a>
+                <!-- <a class="nav-link block py-2 px-4  bg-yellow-600  hover:bg-gray-200" href="#">Notifications</a> -->
+                <!-- <a class="nav-link block py-2 px-4  bg-yellow-600  hover:bg-gray-200" href="#">Messages</a> -->
                 <form action="{{ route('logout') }}" method="POST" >
         @csrf
         <button type="submit" class="nav-link block py-2 px-4  bg-yellow-600  hover:bg-gray-200">Déconnexion</button>
@@ -73,18 +60,27 @@
                     
                     <div class="mt-6">
         <h3 class="text-xl font-bold">Vos Articles</h3>
-        <ul class="mt-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach($articles as $article)
                 <li class="bg-white shadow-md p-4 mb-2">
+                <div class="flex justify-center items-center bg-gray-200 h-48">
+    <img src="{{ Storage::url($article->image_path) }}" 
+         alt="Image de l'article" 
+         class="max-h-full max-w-full">
+</div>
                     <h4 class="font-semibold">{{ $article->title }}</h4>
-                    <p>{{ $article->content }}</p>
+                    <p class="text-gray-600 mb-4">{{ Str::limit($article->summary, 100) }}</p>
+                    <div class="flex justify-between items-center">
+                        <a href="{{ route('articles.show', $article->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Voir l'article</a>
+                    </div>
                 </li>
             @endforeach
-        </ul>
-    </div>
+            </div>
+            </div>
+    
 </div> 
     </div>
-
+  
     
 </body>
 </html>

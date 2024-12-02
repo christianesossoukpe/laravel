@@ -9,7 +9,8 @@
         <div>
             <a href="/" class="text-white mx-4">Accueil</a>
             <a href="/articles" class="text-white mx-4">Articles</a>
-            <a href="/dashboard" class="text-white mx-4 hover:underline">Mon espace</a>
+            <a href="/dashboard" class="text-white mx-4 ">Mon espace</a>
+            <a href="{{ route('articles.create') }}" class="text-white mx-4">Créer</a>
         </div>
     </div>
 </nav>
