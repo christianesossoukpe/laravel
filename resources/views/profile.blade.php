@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container flex ml-52 justify-center items-center min-h-screen bg-[url('/public/images/bl.jpg')] bg-cover bg-center">
+<div class="container flex ml-52 justify-center items-center min-h-screen bg-[url('/public/images/.jpg')] bg-cover bg-center">
     <!-- Conteneur principal -->
     <div class="bg-white  shadow-lg rounded-lg p-8 max-w-3xl w-full">
         <h1 class="text-3xl font-bold text-gray-800 mb-8 text-center">Profil de {{ Auth::user()->name ?? 'Invité' }}</h1>

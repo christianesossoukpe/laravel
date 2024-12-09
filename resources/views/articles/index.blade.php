@@ -2,8 +2,8 @@
 
 @section('content')
 <!-- Contenu Principal -->
-<div class="container ml-60 mx-auto p-10">
-<nav class="bg-yellow-600 p-4">
+<div class="container"> 
+<nav class="bg-yellow-600 p-6">
     <div class="container mx-auto flex justify-between items-center">
         <a href="/" class="text-white text-lg font-bold">Mon Application</a>
         <div>
@@ -29,7 +29,7 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $article->title }}</h3>
                     <p class="text-gray-600 mb-4">{{ Str::limit($article->summary, 100) }}</p>
                     <div class="flex justify-between items-center">
-                        <a href="{{ route('articles.show', $article->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Voir l'article</a>
+                        <a href="{{ route('articles.show', $article->id) }}" class="bg-yellow-500  text-white px-4 py-2 rounded-lg hover:bg-blue-700">Voir l'article</a>
                     </div>
                 </div>
             </div>
@@ -42,6 +42,5 @@
             {{ $articles->links('pagination::tailwind') }}
         </div>
     </div>
-
 </div>
 @endsection

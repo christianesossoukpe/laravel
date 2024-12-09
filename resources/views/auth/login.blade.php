@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="max-w-md ml-[700px] p-6 bg-white shadow-lg rounded-lg mt-64 bg-[url('/public/images/imgbi.png')] bg-cover bg-center">
+<div class="max-w-md ml-[700px] p-6 bg-white shadow-lg rounded-lg mt-64 bg-[url('/public/images/.png')] bg-cover bg-center">
     <h2 class="text-3xl font-semibold text-center text-blue-600 mb-6">Connectez-vous ici</h2>
     <form method="POST" action="{{ route('login') }}">
         @csrf

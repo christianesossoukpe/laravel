@@ -30,8 +30,6 @@
                   href="{{ route('articles.create') }}">Créer un nouvel article</a>
             </li>
             <li class="nav-item">
-                <!-- <a class="nav-link block py-2 px-4 mt-8
-                 bg-blue-600  hover:bg-gray-200" href="#">Profil</a> -->
                  @if(Auth::check())
     <a href="{{ route('profile') }}" class="nav-link block py-2 px-4 mt-8
     bg-blue-600   hover:bg-gray-200">Mon Profil</a>
@@ -62,8 +60,7 @@
     </form>
             </div>
                     </nav>
-                    
-                    <div class="mt-6">
+                                        <div class="mt-6">
         <h3 class="text-xl font-bold">Mes Articles</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach($articles as $article)

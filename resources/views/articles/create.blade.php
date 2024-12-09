@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container ml-[500px] mt-32 w-[900px] p-10 flex justify-center text-center bg-[url('/public/images/blanc.jpg')] bg-cover bg-center">
-        <div class="bg-orange-50 shadow-md rounded-md overflow-hidden w-full max-w-2xl">
+<div class="container ml-[500px] mt-32 w-[900px] p-10 flex justify-center text-center bg-[url('/public/images/')] bg-cover bg-center">
+        <div class="bg-blue-50 shadow-md rounded-md overflow-hidden w-full max-w-2xl">
         <h2 class="text-3xl font-semibold text-center text-blue-600 mb-6">Ajouter d'articles ici</h2>
 
         <form action="{{ route('articles.store') }}" method="POST" enctype="multipart/form-data">

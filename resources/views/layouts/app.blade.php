@@ -6,7 +6,7 @@
     <title>Mon Application</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-[url('/public/images/img.jpg')] bg-cover bg-center">
+<body class="bg-[url('/public/images/.jpg')] bg-cover bg-center">
 @if (session('success') || session('error'))
 <div id="messageModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
     <div class="bg-white p-6 rounded-lg shadow-lg w-96">
@@ -21,7 +21,7 @@
 </div>
 @endif
 
-<div class="container mt-4  bg-opacity-80 p-6 rounded-lg shadow-lg">
+<div class="container mt-2  bg-opacity-100 w-full ml-44 p-8 rounded-lg shadow-lg">
     @yield('content')
 </div>
 <script>
