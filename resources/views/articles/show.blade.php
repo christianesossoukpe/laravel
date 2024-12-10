@@ -1,12 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container ml-[400px] h-[800px] mt-8  w-[1000px] p-10 flex justify-center text-center bg-gray-200 bg-cover bg-center">
-        <div class="bg-orange-200 shadow-md rounded-md overflow-hidden">
+<nav class="   p-6" style="background-color: #FFB706;">
+    <div class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-white text-lg font-bold">Mon Application</a>
+        <div>
+            <a href="/" class="text-white mx-4">Accueil</a>
+            <a href="/articles" class="text-white mx-4">Articles</a>
+            <a href="/dashboard" class="text-white mx-4 ">Mon espace</a>
+            <a href="{{ route('articles.create') }}" class="text-white mx-4">Créer</a>
+        </div>
+    </div>
+</nav>
+    <div class="container ml-[200px] h-[800px] mt-8  w-[1000px] p-10 flex justify-center text-center
+     bg-gray-100 bg-cover bg-center">
+        <div class="bg-white-200 shadow-md rounded-md overflow-hidden">
         <div class="flex justify-center w-[500px] items-center bg-white h-[400px]">
     <img src="{{ Storage::url($article->image_path) }}" 
          alt="Image de l'article" 
-         class="h-full w-full">
+         class="h-full w-full  bg-white  ">
 
             </div>
 
@@ -21,7 +33,7 @@
                         Lire le PDF
                     </a>
                     <a href="{{ route('articles.edit', $article->id) }}" 
-                       class="bg-blue-400 text-white px-4 py-2 rounded-md hover:bg-blue-500">
+                       class=" text-white px-4 py-2 rounded-md hover:bg-blue-500"  style="background-color: #FFB706;">
                         Modifier
                     </a>
 

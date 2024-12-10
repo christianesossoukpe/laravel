@@ -47,7 +47,7 @@
 
     <div class="content flex-grow p-6">
         <!-- Barre de navigation -->
-        <nav class="flex items-center justify-between bg-yellow-600  shadow-md p-4">
+        <nav class="flex items-center justify-between shadow-md p-4" style="background-color: #FFB706;">
         <span class="text-2xl font-bold text-black-700 mb-4">
                 Bienvenu sur votre espace personnel, {{ Auth::user()->name ?? 'Invité' }}
             </span>            <div class="flex space-x-4">

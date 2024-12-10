@@ -14,32 +14,33 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 </head>
-<body class="bg-[url('/public/images/.png')] bg-cover bg-center">
-  
+<body class="bg-[url('/public/images/background.png')] bg-cover bg-center">
 
     <!-- Contenu Principal -->
-    <div class="container mx-auto mt-52">
-        <div class="text-center">
-            <h1 class="text-4xl font-bold text-black-700 mb-4">Bienvenue sur Articles Home</h1>
-            <p class="text-gray-700 text-lg">
+    <div class="container mx-auto px-4 py-16 min-h-screen flex flex-col justify-center items-center bg-blue-50">
+        <!-- Texte d'introduction -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-blue-800 mb-4">Bienvenue sur Articles Home</h1>
+            <p class="text-lg text-gray-700">
                 Découvrez une collection d'articles prêts à être téléchargés et partagez vos découvertes avec d'autres !
             </p>
-           
-            <a href="/register" class="mt-6 inline-block bg-blue-500 text-black px-4 py-3 rounded-lg hover:bg-gray-300">
-        Inscrivez-vous pour accedez à l'interface des Articles!
-            </a>
         </div>
 
         <!-- Section Avantages -->
-        <div class="text-center">
-        <h1 class="text-xl mt-6 font-bold text-black-700 mb-4">Fonctionnalités</h1>
+        <div class="p-6 bg-white shadow-lg rounded-lg text-center max-w-md w-full">
+            <h3 class="text-2xl font-semibold text-blue-700 mb-4">Publiez et téléchargez des articles facilement</h3>
+            <p class="text-gray-600">
+                Ajoutez un titre, un contenu riche, des images et des catégories 
+                pour mieux organiser vos publications.
+            </p>
         </div>
 
-            <div class="p-4 bg-white shadow-md rounded-md text-center">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Publiez  et telechargez des articles facilement.</h3>
-                <p class="text-gray-600"> Ajoutez un titre, un contenu riche, des images et des catégories </p>
-                <p> pour mieux organiser vos publications.</p>
-            </div>
-            </div>
-   </body>
+        <!-- Bouton -->
+        <a href="/register" 
+           class="mt-8 inline-block bg-yellow-500 text-white px-6 py-3 rounded-lg text-lg font-medium 
+                  hover:bg-yellow-400 hover:shadow-md transition duration-300">
+            Accédez aux articles en vous connectant !
+        </a>
+    </div>
+</body>
 </html>
